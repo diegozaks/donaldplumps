@@ -405,8 +405,47 @@ textarea {
   /* 2 */ }
 
 /* line 4, site.css.scss */
-body {
-  background: #ECC561;
-  text-align: center;
-  font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 1em; }
+html, body {
+  height: 100%;
+  margin: 0px; }
+
+/* line 9, site.css.scss */
+* {
+  margin: 0;
+  padding: 0; }
+
+/* line 13, site.css.scss */
+#container {
+  overflow: hidden;
+  height: 100%;
+  background: #edeae8;
+  position: relative; }
+
+/* line 20, site.css.scss */
+video {
+  position: absolute;
+  /* Horizontally center*/
+  left: 50%;
+  transform: translateX(-50%);
+  /* Could do vertial centering too, depending upon your requirements:
+  top: 50%;
+  transform: translate(-50%, -50%);
+  
+  But in practise I noticed just `top: 0;` fulfills our expectations pretty well (obviously will vary from video to video)
+  */
+  top: 0; }
+
+/* line 36, site.css.scss */
+#overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  width: 100%;
+  align-items: center; }
+  /* line 45, site.css.scss */
+  #overlay p {
+    margin: 0 auto; }
